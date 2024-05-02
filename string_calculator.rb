@@ -8,11 +8,11 @@ class StringCalculator
 
     return @numbers.to_i unless @numbers.include?(',')
     
-    numbers[0].to_i + numbers[1].to_i
+    numbers.inject { |sum,num| sum + num}
   end
 
   def numbers
-    numbers = @numbers.split(',')
+    numbers = @numbers.split(',').map {|num| num.to_i}
     numbers
   end
 end

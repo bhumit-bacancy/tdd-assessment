@@ -31,5 +31,13 @@ RSpec.describe StringCalculator do
         expect(@calculator.add).to eq(11)
       end
     end
+
+    context 'when the input string is multiple2 numbers' do
+      let(:input_string) { '5,6,7,8'}
+  
+      it 'returns 26 for 5,6,7,8' do
+        expect(@calculator.add).to eq(26)
+      end
+    end
   end
 end
