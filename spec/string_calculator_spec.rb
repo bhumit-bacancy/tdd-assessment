@@ -55,5 +55,13 @@ RSpec.describe StringCalculator do
         expect(@calculator.add).to eq("invalid input")
       end
     end
+
+    context 'when the input string containes different delimiters' do
+      let(:input_string) { '//;\n1;2'}
+  
+      it 'returns 3 for //;\n1;2' do
+        expect(@calculator.add).to eq(3)
+      end
+    end
   end
 end
